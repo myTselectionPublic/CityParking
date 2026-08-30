@@ -1,10 +1,10 @@
 [![HACS Default](https://img.shields.io/badge/HACS-Default-blue.svg)](https://github.com/hacs/default)
-[![GitHub release](https://img.shields.io/github/release/myTselection/CityParking.svg)](https://github.com/myTselection/CityParking/releases)
-![GitHub repo size](https://img.shields.io/github/repo-size/myTselection/CityParking.svg)
+[![GitHub release](https://img.shields.io/github/release/myTselectionPublic/CityParking.svg)](https://github.com/myTselectionPublic/CityParking/releases)
+![GitHub repo size](https://img.shields.io/github/repo-size/myTselectionPublic/CityParking.svg)
 
-[![GitHub issues](https://img.shields.io/github/issues/myTselection/CityParking.svg)](https://github.com/myTselection/CityParking/issues)
-[![GitHub last commit](https://img.shields.io/github/last-commit/myTselection/CityParking.svg)](https://github.com/myTselection/CityParking/commits/master)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/myTselection/CityParking.svg)](https://github.com/myTselection/CityParking/graphs/commit-activity)
+[![GitHub issues](https://img.shields.io/github/issues/myTselectionPublic/CityParking.svg)](https://github.com/myTselectionPublic/CityParking/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/myTselectionPublic/CityParking.svg)](https://github.com/myTselectionPublic/CityParking/commits/master)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/myTselectionPublic/CityParking.svg)](https://github.com/myTselectionPublic/CityParking/graphs/commit-activity)
 
 # 🅿️ City Parking Home Assistant integration
 Home Assistant custom integration to provide public street city parking information for any location. This custom component has been built from the ground up to fetch public parking information and integrate this information into Home Assistant. This integration is built against the API and public websites provided by [seety.co](https://seety.co/) and [seety Maps](https://map.seety.co/?lang=en). (and maybe other similar sites such as [Parkopedia](https://en.parkopedia.com/) in future). Sensors will be created for any desired location and specific service can be called to get parking information ad hoc of any location. 
@@ -15,9 +15,9 @@ This integration is in no way affiliated with seety.
 | ---------------------------------------------------------------------------------------------------------------------|
 
 
-<p align="center"><img src="https://raw.githubusercontent.com/myTselection/CityParking/master/icon.png"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/myTselectionPublic/CityParking/master/icon.png"/></p>
 
-<p align="center"><img src="https://raw.githubusercontent.com/myTselection/CityParking/master/seety_supported_countries.svg"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/myTselectionPublic/CityParking/master/seety_supported_countries.svg"/></p>
 
 # Main use case
 
@@ -32,7 +32,7 @@ To detect exiting a car, an automation can be defined using sensor.smartphone_ha
 
 ## Installation
 - [HACS](https://hacs.xyz/): search for CityParking in the default HACS repo list or use below button to navigate directly to it on your local system and install via HACS. 
-   -    [![Open your Home Assistant instance and open the repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg?style=flat-square)](https://my.home-assistant.io/redirect/hacs_repository/?owner=myTselection&repository=CityParking&category=integration)
+   -    [![Open your Home Assistant instance and open the repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg?style=flat-square)](https://my.home-assistant.io/redirect/hacs_repository/?owner=myTselectionPublic&repository=CityParking&category=integration)
 - Restart Home Assistant
 - Add 'City Parking' integration via HA Settings > 'Devices and Services' > 'Integrations'
 - In the setup configuration, provide an **origin**. 
@@ -362,7 +362,7 @@ To detect exiting a car, an automation can be defined using sensor.smartphone_ha
       
    </details>
 * Find the public parking information to a given location.
-   * ![Service find nearest](https://raw.githubusercontent.com/myTselection/CityParking/refs/heads/master/parking_info_service.png)
+   * ![Service find nearest](https://raw.githubusercontent.com/myTselectionPublic/CityParking/refs/heads/master/parking_info_service.png)
    * The response will contain all available seety.co data. On top, a dict `extra_data` is available which contains the most relevant data as used in the 'City Parking' sensors.
    * <details><summary>It will return a JSON such as example below:</summary>
 
@@ -1494,13 +1494,13 @@ visibility:
 ```
 
 ## Status
-Proof of concept status, still validating and extending functionalities. [Issues](https://github.com/myTselection/CityParking/issues) section in GitHub.
+Proof of concept status, still validating and extending functionalities. [Issues](https://github.com/myTselectionPublic/CityParking/issues) section in GitHub.
 
 ## Technical pointers
 The main logic and API connection related code can be found within source code CityParking/custom_components/cityparking:
-- [sensor.py](https://github.com/myTselection/CityParking/blob/master/custom_components/cityparking/sensor.py)
-- [coordinator.py](https://github.com/myTselection/CityParking/blob/master/custom_components/cityparking/coordinator.py)
-- [seetyApi SeetyAPI](https://github.com/myTselection/CityParking/blob/master/custom_components/cityparking/seetyApi/__init__.py)
+- [sensor.py](https://github.com/myTselectionPublic/CityParking/blob/master/custom_components/cityparking/sensor.py)
+- [coordinator.py](https://github.com/myTselectionPublic/CityParking/blob/master/custom_components/cityparking/coordinator.py)
+- [seetyApi SeetyAPI](https://github.com/myTselectionPublic/CityParking/blob/master/custom_components/cityparking/seetyApi/__init__.py)
 
 All other files just contain boilerplat code for the integration to work wtihin HA or to have some constants/strings/translations.
 
